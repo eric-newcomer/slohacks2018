@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>WikiViewer</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://cdn.jsdelivr.net/foundation/6.1.2/foundation.min.css'>
+<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Cabin:100,300'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <div id="wikipedia" class="small-10 small-offset-1 medium-8 medium-offset-2 large-6 large-offset-3 columns vertical" ng-app="WikipediaApplication" ng-controller="WikipediaController">
+
+ <h1 class="text-center margin">WikiViewer</h1>
+
+ <div class="row">
+  <div class="small-8 small-offset-2 medium-6 medium-offset-3 large-4 large-offset-4 columns">
+
+   <form>
+    <input type="text" placeholder="Search Wikipedia" ng-model="searchTerm" ng-change="searchWikipedia()">
+   </form>
+  </div>
+ </div>
+ <p class="text-center"><a href="http://en.wikipedia.org/wiki/Special:Random" target="_blank">Or click here for a random article</a></p>
+ <a href="https://en.wikipedia.org/?curid={{ result.pageid }}" target="_blank" ng-repeat="result in results">
+  <div class="callout large">
+   <h2>{{ result.title }}</h2>
+   <p>{{ result.extract }}</p>
+  </div>
+ </a>
+</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+h1, h2, body {
+	font-family: 'Cabin', sans-serif;
+}
+
+.vertical {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.callout:hover {
+	background-color: #EBEBEB;
+}
+
+h1 {
+	font-size: 4rem;
+	font-weight: 300;
+}
+
+h2 {
+	text-transform: uppercase;
+}
